@@ -1,0 +1,106 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 196 100% 45%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 222 84% 35%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 24 100% 53%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 196 100% 45%;
+
+    --radius: 0.5rem;
+
+    /* Chart Colors */
+    --chart-1: 196 100% 45%;
+    --chart-2: 222 84% 35%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 346 80% 50%;
+    --chart-5: 24 100% 53%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 196 100% 45%; 
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 222 84% 35%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 24 100% 53%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 196 100% 45%;
+
+    /* Chart Colors for Dark Mode */
+    --chart-1: 196 70% 55%;
+    --chart-2: 222 70% 60%;
+    --chart-3: 142 70% 50%;
+    --chart-4: 346 70% 60%;
+    --chart-5: 24 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .energy-card {
+    @apply bg-white rounded-xl p-6 shadow-md border border-border hover:shadow-lg transition-all duration-300;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+}
